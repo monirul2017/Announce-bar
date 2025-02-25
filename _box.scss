@@ -1,0 +1,248 @@
+@mixin storage($bgColor, $buttonColor: "") {
+  .wrapper {
+    position: relative;
+    margin: 0 auto;
+    padding: 20px 2%;
+    background-color: $bgColor;
+    display: flex;
+    flex-wrap: wrap !important;
+    justify-content: space-between;
+    align-items: center;
+
+    .cross-icon {
+      position: absolute;
+      display: flex;
+      align-items: center;
+      // top: 10px;
+      right: 5px;
+      color: white;
+      font-size: 20px;
+    }
+
+    .left {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+
+      div {
+        min-width: 63px;
+        padding: 3px 0;
+        margin-right: 10px;
+        border: 1px solid #ffffff;
+        border-bottom: none;
+        border-radius: 12px;
+        text-align: center;
+      }
+
+      h4 {
+        font-size: 30px;
+        color: white;
+        font-weight: 700;
+        line-height: 34px;
+      }
+
+      span {
+        font-size: 12px;
+        color: #ffffff;
+        font-weight: 500;
+        line-height: 12px;
+      }
+    }
+
+    .right {
+      display: flex;
+      flex: 1;
+      justify-content: flex-end;
+      align-items: center;
+
+      h3 {
+        font-size: 30px;
+        text-transform: capitalize;
+        font-weight: 600;
+        line-height: 39px;
+        color: #ffffff;
+        text-align: center;
+        margin-right: 10px;
+      }
+
+      button {
+        width: 153px;
+        height: 42px;
+        box-sizing: border-box;
+        line-height: 22.8px;
+        font-weight: 600;
+        font-size: 19px;
+        border-radius: 8px;
+        outline: none;
+        border: none;
+        color: $buttonColor;
+        text-transform: capitalize;
+      }
+    }
+  }
+
+  // Responsive Break Point
+  @media screen and (max-width: 1340px) {
+    .left {
+      div {
+        margin-right: 5px !important;
+        padding: 3px 10.3px;
+        text-align: left;
+      }
+
+      h4 {
+        font-size: 25px !important;
+        line-height: 30px !important;
+      }
+    }
+
+    .right {
+      h3 {
+        font-size: 26px !important;
+        line-height: 26px;
+      }
+    }
+  }
+
+  @media screen and (max-width: 1170px) {
+    .left {
+      div {
+        margin-right: 5px !important;
+        padding: 1px 8.3px;
+        text-align: left;
+      }
+
+      h4 {
+        font-size: 18px !important;
+        line-height: 25px !important;
+      }
+    }
+
+    .right {
+      h3 {
+        font-size: 22px !important;
+        line-height: 25px;
+      }
+
+      button {
+        width: 130px !important;
+        height: 36px !important;
+        font-size: 14px !important;
+      }
+    }
+  }
+
+  @media screen and (max-width: 1024px) {
+    .left {
+      div {
+        margin-right: 5px !important;
+        padding: 1px 8.3px;
+        text-align: left;
+      }
+
+      h4 {
+        font-size: 18px !important;
+        line-height: 25px !important;
+      }
+    }
+
+    .right {
+      flex-wrap: wrap !important;
+      justify-content: center !important;
+
+      h3 {
+        font-size: 20px !important;
+        line-height: 25px !important;
+        margin-bottom: 10px !important;
+      }
+
+      button {
+        width: 120px !important;
+        height: 34px !important;
+        font-size: 12px !important;
+      }
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    .wrapper {
+      flex-direction: column !important;
+
+      .right {
+        flex-direction: column !important;
+        margin-top: 10px !important;
+      }
+    }
+  }
+}
+
+// box -1
+.box1 {
+  @include storage(#43a9ff,#008AFF);
+}
+
+//   box -2
+
+.box2 {
+  @include storage(#339600,#339600);
+
+      .left {
+          div {
+            border: none !important;
+            border-radius: 3px !important;
+            border-right: 1px solid #ffffff !important;
+              &:last-child{
+                border: none !important
+              }
+          }
+        } 
+      }
+
+// box -3
+
+.box3 {
+    @include storage(#961800,#961800);
+    .left {
+      div {
+        border: none !important;
+        border-radius: 0 !important;
+        border-right: 1px dotted #ffffff !important;
+
+        &:last-child{
+          border: none !important ;
+        }
+      }
+    }
+}
+
+// box -4
+
+.box4 {
+  @include storage(#4f00db,#4F00DB);
+
+  .left {
+    div {
+      background-color: #002496;
+      border-radius: 4px !important;
+      border: none !important;
+    }
+  }
+
+}
+
+// box-5
+
+.box5 {
+    @include storage(#a800ff,#A800FF);
+
+    .left {
+        div {
+          border: none !important;
+
+          span {
+            font-size: 10px !important;
+          }
+        }
+    }
+
+}
