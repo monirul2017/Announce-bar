@@ -1,0 +1,231 @@
+@mixin storage($bgColor, $buttonColor: "") {
+    .wrapper {
+      position: relative;
+      margin: 0 auto;
+      padding: 20px 2%;
+      background-color: $bgColor;
+      display: flex;
+      flex-wrap: wrap !important;
+      justify-content: space-between;
+      align-items: center;
+  
+      .cross-icon {
+        position: absolute;
+        display: flex;
+        align-items: center;
+        right: 5px;
+        color: white;
+        font-size: 20px;
+      }
+  
+      .left {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+
+      }
+  
+      .right {
+        display: flex;
+        flex: 1;
+        justify-content: flex-end;
+        align-items: center;
+  
+        h3 {
+          font-size: 30px;
+          text-transform: capitalize;
+          font-weight: 600;
+          line-height: 39px;
+          color: #ffffff;
+          text-align: center;
+          margin-right: 10px;
+        }
+  
+        button {
+          width: 153px;
+          height: 42px;
+          box-sizing: border-box;
+          line-height: 22.8px;
+          font-weight: 600;
+          font-size: 19px;
+          border-radius: 8px;
+          outline: none;
+          border: none;
+          color: $buttonColor;
+          text-transform: capitalize;
+        }
+      }
+    }
+  
+    // Responsive Break Point
+    @media screen and (max-width: 1340px) {
+      .left {
+        div {
+          margin-right: 5px !important;
+          padding: 3px 10.3px;
+          text-align: left;
+        }
+  
+        h4 {
+          font-size: 25px !important;
+          line-height: 30px !important;
+        }
+      }
+  
+      .right {
+        h3 {
+          font-size: 26px !important;
+          line-height: 26px;
+        }
+      }
+    }
+  
+    @media screen and (max-width: 1170px) {
+      .left {
+        div {
+          margin-right: 5px !important;
+          padding: 1px 8.3px;
+          text-align: left;
+        }
+  
+        h4 {
+          font-size: 18px !important;
+          line-height: 25px !important;
+        }
+      }
+  
+      .right {
+        h3 {
+          font-size: 22px !important;
+          line-height: 25px;
+        }
+  
+        button {
+          width: 130px !important;
+          height: 36px !important;
+          font-size: 14px !important;
+        }
+      }
+    }
+  
+    @media screen and (max-width: 1024px) {
+      .left {
+        div {
+          margin-right: 5px !important;
+          padding: 1px 8.3px;
+          text-align: left;
+        }
+  
+        h4 {
+          font-size: 18px !important;
+          line-height: 25px !important;
+        }
+      }
+  
+      .right {
+        flex-wrap: wrap !important;
+        justify-content: center !important;
+  
+        h3 {
+          font-size: 20px !important;
+          line-height: 25px !important;
+          margin-bottom: 10px !important;
+        }
+  
+        button {
+          width: 120px !important;
+          height: 34px !important;
+          font-size: 12px !important;
+        }
+      }
+    }
+  
+    @media screen and (max-width: 768px) {
+      .wrapper {
+        flex-direction: column !important;
+  
+        .right {
+          flex-direction: column !important;
+          margin-top: 10px !important;
+        }
+      }
+    }
+  }
+  
+
+  .basic-box1{
+    @include storage(#FF0071, #FF0071);
+
+    .box {
+      width: 85px;
+      height: 85px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      // border: 1px solid white;
+      margin-right: 10px;
+      position: relative;
+    }
+    
+    .masking-box {
+      width: 60px;
+      height:60px;
+      background-color: #9E0046;
+      transform: rotate(-45deg);
+      position: absolute;
+      border-radius: 5px;
+    }
+    
+    .timer {
+      z-index: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      color: white;
+    }
+  }
+
+
+
+  .basic-box-2{
+  @include storage(#0F00FF, #0F00FF);
+
+  .left {
+    .item {
+      min-width: 64px;
+      min-height: 64px ;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      background-color: #003EFF;
+      margin-right: 10px;
+
+      clip-path: polygon(50% 0% ,90% 18% ,100% 60% , 75% 100% , 25% 100% , 0% 60% , 10% 18%);
+
+    }
+
+    h4{
+      font-size: 30px;
+      color: white;
+      line-height: 37px;
+      font-weight: 700;
+    }
+
+    span {
+      color: white;
+      font-size: 12px;
+      line-height: 12px;
+      font-weight: 700;
+    }
+  }
+
+}
+
+
+
+
+
+
+
