@@ -1,0 +1,449 @@
+
+
+@mixin announce-with-form($bgColor,$textColor,$inputBtn){
+
+  .wrapper{
+
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      background-color: $bgColor;   
+      padding: 20px 20px;
+
+      .text{
+        color: $textColor;
+        font-size: 18px;
+        text-transform: capitalize;
+        text-align: center;
+      }
+
+      .form {
+        display: flex;
+        width: 500px;
+        min-height: 40px;
+
+
+        form{
+
+          width: 100%;
+          display: flex;
+          flex-wrap: wrap;
+          gap: 5px;
+          max-height: 40px;
+
+          input{
+            background:$inputBtn;
+            width: 70%;
+            border-radius: 8px;
+            border: 0;
+            outline: 0;
+            color: #FFFFFF;
+            padding-left: 10px;
+            font-weight: 400;
+            font-size: 12px;
+            line-height: 24px;
+            text-transform: capitalize;
+
+          }
+          ::placeholder{
+            color: #FFFFFF;
+            font-size: 12px;
+           }
+
+          .btn {
+            width: 28%;
+            background:$inputBtn;
+            border-radius: 8px;
+            outline: 0;
+            border: none;
+            font-size: 16px;
+            line-height: 24px;
+            font-weight: 700;
+            color: #FFFFFF;
+            font-weight: 700;
+            cursor: pointer;
+          }
+        
+        }
+      
+      }
+  }
+
+  @media screen and (max-width:1210px){
+
+    .text {
+      h3{
+        font-size: 17px !important;
+      }
+    }
+
+    .form{
+      width: 420px !important;
+      max-height: 38px !important;
+
+    }    
+  }
+
+  @media screen and (max-width:1020px){
+
+    .text {
+      margin-bottom: 10px;
+      h3{
+        font-size: 17px !important;
+        text-align: center;
+      }
+    }
+
+    .form{
+      width: 350px !important;
+      min-height: 38px !important;
+    }
+    
+  }
+
+  @media screen and (max-width:890px){
+
+    .wrapper {
+      flex-direction: column;
+      justify-content: center ;
+    }
+
+    .text {
+      margin-bottom: 10px;
+
+      h3{
+        font-size: 17px !important;
+        text-align: center;
+      }
+    }
+
+    .form{
+      width: 300px !important;
+      justify-content: center !important;
+
+      input{
+        font-size: 14px !important;
+      }
+      .btn {
+        font-size: 12px !important;
+      }
+    }  
+  }
+}
+
+// announce-with-form-1
+.announce-with-form-1 {
+  @include announce-with-form(#002D54,#FFFFFF,#057A00)
+}
+
+// .announce-with-form-2
+.announce-with-form-2{
+  @include announce-with-form(#5A000D,#FFFFFF,#820013 )
+}
+
+// .announce-with-form-3
+.announce-with-form-3 {
+  @include announce-with-form(#3B005A, #FFFFFF, #5D018D)
+}
+
+// .announce-with-form-4
+.announce-with-form-4 {
+  @include announce-with-form(#045A00, #FFFFFF, #057A00);
+
+  .wrapper {
+    justify-content: center !important;
+  }
+}
+
+// .announce-with-form-5
+.announce-with-form-5 {
+  @include announce-with-form(#C8E200,#000000, #202400);
+}
+
+// .announce-with-form-6
+.announce-with-form-6 {
+  @include announce-with-form(#C8E200,#000000, "");
+
+  
+  .wrapper {
+    justify-content: center !important;
+  }
+}
+
+// .announce-with-form-7
+.announce-with-form-7{
+  @include announce-with-form(#C8E200, #000000, #202400);
+
+  .wrapper {
+    justify-content: center !important;
+
+    form {
+      justify-content: center !important;
+    
+    }
+  }
+}
+
+
+// announce-with-form-8
+
+.announce-with-form-8 {
+  @include announce-with-form(#009D22, #FFFFFF,#009D22 );
+
+  .form {
+  
+
+    input , .btn {
+      border: 2px solid #FFFFFF !important;
+      border-radius: 40px !important;
+    }
+  }
+}
+
+
+// announce-with-form-9
+
+.announce-with-form-9 {
+  @include announce-with-form(#008AFF,#FFFFFF , #008AFF);
+
+  .form {
+    input{
+      border-bottom: 2px solid #FFFFFF !important;
+      border-radius: 40px !important ;
+    }
+
+    .btn{
+      border-top: 2px solid #FFFFFF !important;
+      border-radius: 30px !important ;
+    }
+  }
+}
+
+// announce-with-form-10
+
+.announce-with-form-10 {
+  @include announce-with-form(#002BFF,#FFFFFF ,#002BFF );
+
+  .form {
+    input{
+      border-bottom: 2px solid #FFFFFF !important;
+      border-radius: 8px !important ;
+    }
+
+    .btn{
+      border-top: 2px solid #FFFFFF !important;
+      border-radius: 8px !important ;
+    }
+  }
+}
+
+
+// announce-with-form-11
+
+.announce-with-form-11 {
+  @include announce-with-form(#8100C3,#FFFFFF ,#8100C3);
+
+  .form {
+    input{
+      border-bottom: 2px solid #FFFFFF !important;
+      border-radius: 8px !important ;
+    }
+
+    .btn{
+      border-bottom: 2px solid #FFFFFF !important;
+      border-radius: 8px !important ;
+    }
+  }
+}
+
+// announce-with-form-12
+
+.announce-with-form-12{
+  @include announce-with-form(#FFFFFF, #000000,#FFFFFF );
+
+  .form {
+    input , .btn {
+      border: 2px solid #000000 !important;
+      color: #000000 !important;
+    }
+
+    ::placeholder {
+      color: #000000 !important;
+    }
+  }
+
+}
+
+// announce-with-form-13
+
+.announce-with-form-13 {
+  @include announce-with-form(#008AFF,#FFFFFF ,#FFFFFF );
+
+  .form {
+
+    input{
+      color: #080050 !important;
+    }
+
+    ::placeholder {
+      color: #080050 !important;
+    }
+    .btn {
+      background-color: #080050 !important;
+    }
+  }
+}
+
+// announce-with-form-14
+
+.announce-with-form-14{
+  @include announce-with-form(#8746FF,#FFFFFF ,#FFFFFF  );
+  .wrapper {
+    justify-content: center;
+  }
+
+  
+  .form {
+
+    input{
+      color: #080050 !important;
+    }
+
+    ::placeholder {
+      color: #080050 !important;
+    }
+    .btn {
+      background-color: #080050 !important;
+    }
+  }
+}
+
+
+// announce-with-form-15
+
+.announce-with-form-15{
+  @include announce-with-form(#8746FF,#FFFFFF ,#FFFFFF  );
+  .wrapper {
+    justify-content: center;
+  }
+
+  
+  .form {
+
+    input{
+      color: #080050 !important;
+      transition: 0.5s;
+      box-shadow: 2px 2px 0px  #080050;
+
+     &:hover {
+      box-shadow: none ;
+      }
+  
+    }
+  
+    ::placeholder {
+      color: #080050 !important;
+    }
+    .btn {
+      background-color: #080050 !important;
+      box-shadow: 2px 2px 0px#FFFFFF;
+      transition: 0.5s;
+
+
+      &:hover {
+        box-shadow: none ;
+      }
+
+    }
+  }
+}
+
+
+
+// announce-with-form-16
+
+.announce-with-form-16 {
+  @include announce-with-form(#008AFF,#FFFFFF ,#FFFFFF );
+
+  .form {
+
+    input{
+      color: #080050 !important;
+      transition: 0.5s;
+      box-shadow: 2px 2px 0px  #080050;
+
+     &:hover {
+      box-shadow: none ;
+      }
+  
+    }
+  
+    ::placeholder {
+      color: #080050 !important;
+    }
+    .btn {
+      background-color: #080050 !important;
+      box-shadow: 2px 2px 0px#FFFFFF;
+      transition: 0.5s;
+
+
+      &:hover {
+        box-shadow: none ;
+      }
+
+    }
+  }
+
+
+
+}
+
+
+
+// announce-with-form-17
+.announce-with-form-17 {
+  @include announce-with-form(#FFDE58,"" ,#FFDE58 );
+  .wrapper{
+    justify-content: center;
+
+    .form {
+      input {
+        border: 1px solid #000000 !important;
+        box-shadow: 2px 2px 0px  #080050;
+        transition: 0.5s;
+
+
+        &::placeholder {
+          color: #000000;
+        }
+
+        &:hover {
+        box-shadow: none;
+
+        }
+      }
+
+      .btn {
+        background-color: #000000 !important;
+        box-shadow: 2px 2px 0px#FFFFFF;
+        transition: 0.5s; 
+
+        &:hover {
+          box-shadow: none;
+  
+          }
+
+      }
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
