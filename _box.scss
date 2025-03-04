@@ -65,7 +65,7 @@
         margin-right: 10px;
       }
 
-      button {
+      .simple-btn {
         width: 153px;
         height: 42px;
         box-sizing: border-box;
@@ -179,6 +179,7 @@
 // box -1
 .box1 {
   @include storage(#43a9ff,#008AFF);
+  // @include 
 }
 
 //   box -2

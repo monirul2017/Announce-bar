@@ -5,6 +5,7 @@
   .wrapper{
 
       display: flex;
+      flex-wrap: wrap;
       flex-direction: row;
       justify-content: space-between;
       align-items: center;
@@ -28,7 +29,6 @@
 
           width: 100%;
           display: flex;
-          flex-wrap: wrap;
           gap: 5px;
           max-height: 40px;
 
@@ -51,28 +51,16 @@
             font-size: 12px;
            }
 
-          .btn {
-            width: 28%;
-            background:$inputBtn;
-            border-radius: 8px;
-            outline: 0;
-            border: none;
-            font-size: 16px;
-            line-height: 24px;
-            font-weight: 700;
-            color: #FFFFFF;
-            font-weight: 700;
-            cursor: pointer;
-          }
-        
+
         }
       
       }
   }
 
-  @media screen and (max-width:1210px){
+  @media screen and (max-width:1240px){
 
     .text {
+      margin-bottom: 10px;
       h3{
         font-size: 17px !important;
       }
@@ -80,7 +68,6 @@
 
     .form{
       width: 420px !important;
-      max-height: 38px !important;
 
     }    
   }
@@ -97,7 +84,6 @@
 
     .form{
       width: 350px !important;
-      min-height: 38px !important;
     }
     
   }
@@ -105,8 +91,9 @@
   @media screen and (max-width:890px){
 
     .wrapper {
-      flex-direction: column;
       justify-content: center ;
+
+
     }
 
     .text {
@@ -119,32 +106,45 @@
     }
 
     .form{
-      width: 300px !important;
+      width: 350px !important;
       justify-content: center !important;
 
       input{
         font-size: 14px !important;
       }
-      .btn {
-        font-size: 12px !important;
-      }
+  
     }  
+  
   }
 }
 
 // announce-with-form-1
 .announce-with-form-1 {
-  @include announce-with-form(#002D54,#FFFFFF,#057A00)
+  @include announce-with-form(#002D54,#FFFFFF,#008AFF);
+  .submit {
+    background-color: #008AFF;
+    color: #FFFFFF
+  }
 }
 
 // .announce-with-form-2
 .announce-with-form-2{
-  @include announce-with-form(#5A000D,#FFFFFF,#820013 )
+  @include announce-with-form(#5A000D,#FFFFFF,#820013 );
+  .submit{
+    background-color:#820013; 
+    color: white;
+    border: 0
+  }
 }
 
 // .announce-with-form-3
 .announce-with-form-3 {
-  @include announce-with-form(#3B005A, #FFFFFF, #5D018D)
+  @include announce-with-form(#3B005A, #FFFFFF, #5D018D);
+  .submit{
+    background-color:#5D018D; 
+    color: #FFFFFF;
+    border: 0
+  }
 }
 
 // .announce-with-form-4
@@ -154,11 +154,19 @@
   .wrapper {
     justify-content: center !important;
   }
+  .submit{
+    background-color: #057A00;
+    color: #FFFFFF
+  }
 }
 
 // .announce-with-form-5
 .announce-with-form-5 {
   @include announce-with-form(#C8E200,#000000, #202400);
+  .submit{
+    background-color: #202400;
+    color: #FFFFFF
+  }
 }
 
 // .announce-with-form-6
@@ -180,6 +188,14 @@
 
     form {
       justify-content: center !important;
+
+      .submit{
+        width: 120px;
+        height: 40px;
+        background-color: #202400;
+        color: #FFFFFF;
+        border-radius: 8px
+      }
     
     }
   }
@@ -194,9 +210,11 @@
   .form {
   
 
-    input , .btn {
+    input , .submit {
       border: 2px solid #FFFFFF !important;
       border-radius: 40px !important;
+      background-color: #009D22;
+      color: #FFFFFF
     }
   }
 }
@@ -213,9 +231,11 @@
       border-radius: 40px !important ;
     }
 
-    .btn{
+    .submit{
       border-top: 2px solid #FFFFFF !important;
       border-radius: 30px !important ;
+      background-color: #008AFF;
+      color: #FFFFFF
     }
   }
 }
@@ -231,9 +251,11 @@
       border-radius: 8px !important ;
     }
 
-    .btn{
+    .submit{
       border-top: 2px solid #FFFFFF !important;
       border-radius: 8px !important ;
+      background-color: #002BFF;
+      color: #FFFFFF
     }
   }
 }
@@ -250,9 +272,10 @@
       border-radius: 8px !important ;
     }
 
-    .btn{
-      border-bottom: 2px solid #FFFFFF !important;
-      border-radius: 8px !important ;
+    .submit{
+      background-color: #8100C3;
+      color: white;
+      border-bottom: 2px solid white
     }
   }
 }
@@ -270,6 +293,11 @@
 
     ::placeholder {
       color: #000000 !important;
+    }
+
+    .submit{
+      border: 2px solid #000000;
+      color: #000000
     }
   }
 
@@ -289,8 +317,9 @@
     ::placeholder {
       color: #080050 !important;
     }
-    .btn {
-      background-color: #080050 !important;
+    .submit{
+      background-color: #080050;
+      color: #FFFFFF
     }
   }
 }
@@ -313,9 +342,12 @@
     ::placeholder {
       color: #080050 !important;
     }
-    .btn {
-      background-color: #080050 !important;
+    .submit{
+      background-color: #080050;
+      color: #FFFFFF
     }
+
+   
   }
 }
 
@@ -334,7 +366,7 @@
     input{
       color: #080050 !important;
       transition: 0.5s;
-      box-shadow: 2px 2px 0px  #080050;
+      box-shadow: 3px 3px 0px  #080050;
 
      &:hover {
       box-shadow: none ;
@@ -345,16 +377,15 @@
     ::placeholder {
       color: #080050 !important;
     }
-    .btn {
-      background-color: #080050 !important;
-      box-shadow: 2px 2px 0px#FFFFFF;
+    .submit {
+      background-color: #080050;
+      color: #FFFFFF;
+      box-shadow:  3px 3px 0px #FFFFFF;
       transition: 0.5s;
 
-
-      &:hover {
-        box-shadow: none ;
+      &:hover{
+        box-shadow: none
       }
-
     }
   }
 }
@@ -364,14 +395,14 @@
 // announce-with-form-16
 
 .announce-with-form-16 {
-  @include announce-with-form(#008AFF,#FFFFFF ,#FFFFFF );
+  @include announce-with-form(#8746FF,#FFFFFF ,#FFFFFF );
 
   .form {
 
     input{
       color: #080050 !important;
       transition: 0.5s;
-      box-shadow: 2px 2px 0px  #080050;
+      box-shadow: 3px 3px 0px  #080050;
 
      &:hover {
       box-shadow: none ;
@@ -382,23 +413,19 @@
     ::placeholder {
       color: #080050 !important;
     }
-    .btn {
-      background-color: #080050 !important;
-      box-shadow: 2px 2px 0px#FFFFFF;
-      transition: 0.5s;
+   .submit{
+    background-color: #080050;
+    color: #FFFFFF;
+    box-shadow: 3px 3px 0px #FFFFFF;
+    transition: 0.5s;
 
-
-      &:hover {
-        box-shadow: none ;
-      }
+    &:hover{
+      box-shadow: none
+    }
+   }
 
     }
   }
-
-
-
-}
-
 
 
 // announce-with-form-17
@@ -410,7 +437,7 @@
     .form {
       input {
         border: 1px solid #000000 !important;
-        box-shadow: 2px 2px 0px  #080050;
+        box-shadow: 3px 3px 0px  #080050;
         transition: 0.5s;
 
 
@@ -423,17 +450,15 @@
 
         }
       }
+      .submit {
+        background-color: #000000;
+        color: #FFFFFF;
+        box-shadow: 3px 3px 0px #FFFFFF;
+        transition: 0.5s;
 
-      .btn {
-        background-color: #000000 !important;
-        box-shadow: 2px 2px 0px#FFFFFF;
-        transition: 0.5s; 
-
-        &:hover {
+        &:hover{
           box-shadow: none;
-  
-          }
-
+        }
       }
     }
   }

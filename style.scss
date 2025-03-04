@@ -7,6 +7,37 @@
   font-family: Inter;
 }
 
+// utilities
+
+button {
+  cursor: pointer;
+}
+
+
+.redius-btn {
+  padding: 8px 26px;
+  border-top-left-radius: 1111px;
+  border-bottom-right-radius: 1111px;
+  font-weight: 600;
+  // font-size: 14px;
+  line-height: 22px;
+  text-transform: capitalize;
+}
+
+.simple-btn {
+  min-width:153px;
+  min-height: 40px;
+  box-sizing: border-box;
+  line-height: 22.8px;
+  font-weight: 600;
+  border-radius: 8px;
+  outline: none;
+  border: none;
+  text-transform: capitalize;
+}
+
+
+
 
 // Import Style 
 @import "_box.scss";
